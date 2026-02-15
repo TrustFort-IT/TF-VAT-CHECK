@@ -1,0 +1,33 @@
+{
+  "id": "7f9c8a1b-2d3e-4f5a-9c7b-1e8d6a4f3b2c",
+  "name": "TF VAT Check",
+  "publisher": "TrustFort IT",
+  "version": "1.0.0.0",
+  "brief": "VAT validation extension for Business Central",
+  "description": "Extension for validating VAT numbers in Business Central",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "24.0.0.0",
+  "application": "24.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "features": [
+    "NoImplicitWith"
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
+  "runtime": "13.0",
+  "target": "Cloud"
+}
