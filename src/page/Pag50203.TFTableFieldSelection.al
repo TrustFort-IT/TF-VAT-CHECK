@@ -3,7 +3,7 @@ namespace TrustFort.VATCheck;
 using System.IO;
 using System.Reflection;
 
-page 50205 "TF Table Field Selection"
+page 50203 "TF Table Field Selection"
 {
     Caption = 'TF Table Field Selection';
     PageType = Card;

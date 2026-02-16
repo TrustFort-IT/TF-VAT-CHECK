@@ -2,7 +2,7 @@ namespace TrustFort.VATCheck;
 
 using System.IO;
 
-page 50206 "TF Selected Package Fields"
+page 50204 "TF Selected Package Fields"
 {
     Caption = 'Selected Fields';
     PageType = ListPart;

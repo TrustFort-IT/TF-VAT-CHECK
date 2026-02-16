@@ -2,7 +2,7 @@ namespace TrustFort.VATCheck;
 
 using System.IO;
 
-permissionset 50206 "TF VAT Check"
+permissionset 50200 "TF VAT Check"
 {
     Assignable = true;
     Caption = 'TF VAT Check';

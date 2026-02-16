@@ -1,6 +1,6 @@
 namespace TrustFort.VATCheck;
 
-codeunit 50201 "TF VAT Validation Mgt."
+codeunit 50200 "TF VAT Validation Mgt."
 {
     Access = Public;
 

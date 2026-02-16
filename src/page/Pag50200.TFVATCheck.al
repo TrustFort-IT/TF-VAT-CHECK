@@ -2,7 +2,7 @@ namespace TrustFort.VATCheck;
 
 using Microsoft.Foundation.Address;
 
-page 50202 "TF VAT Check"
+page 50200 "TF VAT Check"
 {
     Caption = 'VAT Check';
     PageType = Card;

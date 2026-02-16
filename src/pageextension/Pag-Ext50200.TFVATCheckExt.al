@@ -1,6 +1,6 @@
 namespace TrustFort.VATCheck;
 
-pageextension 50208 TFVATCheckExt extends "TF VAT Check"
+pageextension 50200 TFVATCheckExt extends "TF VAT Check"
 {
     actions
     {

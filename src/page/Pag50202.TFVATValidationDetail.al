@@ -1,6 +1,6 @@
 namespace TrustFort.VATCheck;
 
-page 50204 "TF VAT Validation Detail"
+page 50202 "TF VAT Validation Detail"
 {
     Caption = 'VAT Validation Detail';
     PageType = Card;

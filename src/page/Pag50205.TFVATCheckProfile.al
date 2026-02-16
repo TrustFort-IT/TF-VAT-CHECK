@@ -2,7 +2,7 @@ namespace TrustFort.VATCheck;
 
 using Microsoft.Foundation.Company;
 
-page 50207 "TF VAT Check Profile"
+page 50205 "TF VAT Check Profile"
 {
     Caption = 'TF VAT Check Profile';
     PageType = Card;
