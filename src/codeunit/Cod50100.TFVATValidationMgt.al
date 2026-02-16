@@ -1,13 +1,11 @@
 namespace TrustFort.VATCheck;
 
-codeunit 50100 "TF VAT Validation Mgt."
+codeunit 50201 "TF VAT Validation Mgt."
 {
     Access = Public;
 
     var
-        InvalidVATFormatErr: Label 'The VAT registration number format is invalid for country %1.';
-        VATValidationSuccessMsg: Label 'VAT number %1 is valid.';
-        VATValidationFailedMsg: Label 'VAT number %1 validation failed: %2';
+        InvalidVATFormatErr: Label 'The VAT registration number format is invalid for country %1.', Comment = '%1 = Country/Region code';
         NoCountryCodeErr: Label 'Country/Region code must be specified.';
 
     /// <summary>
@@ -78,9 +76,9 @@ codeunit 50100 "TF VAT Validation Mgt."
             'SE': // Sweden
                 exit(ValidateSwedishVAT(CleanVATNo, ValidationMessage));
             else begin
-                    ValidationMessage := StrSubstNo(InvalidVATFormatErr, CountryCode);
-                    exit(false);
-                end;
+                ValidationMessage := StrSubstNo(InvalidVATFormatErr, CountryCode);
+                exit(false);
+            end;
         end;
     end;
 

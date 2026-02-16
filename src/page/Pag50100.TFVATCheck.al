@@ -1,6 +1,8 @@
 namespace TrustFort.VATCheck;
 
-page 50100 "TF VAT Check"
+using Microsoft.Foundation.Address;
+
+page 50202 "TF VAT Check"
 {
     Caption = 'VAT Check';
     PageType = Card;
@@ -83,11 +85,12 @@ page 50100 "TF VAT Check"
             {
                 Caption = 'Validate VAT Number';
                 ApplicationArea = All;
-                Image = Validate;
+                Image = Check;
                 ToolTip = 'Validates the entered VAT registration number';
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
+                PromotedOnly = true;
 
                 trigger OnAction()
                 begin
@@ -103,10 +106,27 @@ page 50100 "TF VAT Check"
                 ToolTip = 'View the history of VAT validations';
                 Promoted = true;
                 PromotedCategory = Process;
+                PromotedOnly = true;
 
                 trigger OnAction()
                 begin
                     Page.Run(Page::"TF VAT Validation Results");
+                end;
+            }
+
+            action(OpenTableFieldSelection)
+            {
+                Caption = 'Table & Field Selection';
+                ApplicationArea = All;
+                Image = SelectEntries;
+                ToolTip = 'Open table and field selection including field filters.';
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedOnly = true;
+
+                trigger OnAction()
+                begin
+                    Page.Run(Page::"TF Table Field Selection");
                 end;
             }
 
@@ -118,6 +138,7 @@ page 50100 "TF VAT Check"
                 ToolTip = 'Clear the current validation';
                 Promoted = true;
                 PromotedCategory = Process;
+                PromotedOnly = true;
 
                 trigger OnAction()
                 begin
