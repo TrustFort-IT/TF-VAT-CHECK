@@ -1,6 +1,8 @@
 namespace TrustFort.VATCheck;
 
-table 50100 "TF VAT Validation Result"
+using Microsoft.Foundation.Address;
+
+table 50200 "TF VAT Validation Result"
 {
     Caption = 'VAT Validation Result';
     DataClassification = CustomerContent;

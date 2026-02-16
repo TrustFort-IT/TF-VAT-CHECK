@@ -1,21 +1,22 @@
 namespace TrustFort.VATCheck;
 
-page 50101 "TF VAT Validation Results"
+page 50202 "TF VAT Validation Detail"
 {
-    Caption = 'VAT Validation Results';
-    PageType = List;
+    Caption = 'VAT Validation Detail';
+    PageType = Card;
     ApplicationArea = All;
     UsageCategory = History;
     SourceTable = "TF VAT Validation Result";
     Editable = false;
-    CardPageId = "TF VAT Validation Detail";
 
     layout
     {
         area(Content)
         {
-            repeater(Group)
+            group(General)
             {
+                Caption = 'General';
+
                 field("Entry No."; Rec."Entry No.")
                 {
                     ApplicationArea = All;
@@ -47,56 +48,47 @@ page 50101 "TF VAT Validation Results"
                     ToolTip = 'Shows the validation date';
                 }
 
-                field("Validation Message"; Rec."Validation Message")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Shows the validation message';
-                }
-
                 field("User ID"; Rec."User ID")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Shows the user who performed the validation';
                 }
             }
-        }
-    }
 
-    actions
-    {
-        area(Processing)
-        {
-            action(ValidateNew)
+            group(Details)
             {
-                Caption = 'New VAT Check';
-                ApplicationArea = All;
-                Image = New;
-                ToolTip = 'Opens the VAT check page to validate a new VAT number';
-                Promoted = true;
-                PromotedCategory = Process;
-                PromotedIsBig = true;
+                Caption = 'Details';
 
-                trigger OnAction()
-                begin
-                    Page.Run(Page::"TF VAT Check");
-                end;
+                field("Company Name"; Rec."Company Name")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows the company name (if available)';
+                }
+
+                field("Company Address"; Rec."Company Address")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows the company address (if available)';
+                }
+
+                field("Validation Message"; Rec."Validation Message")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows the validation message';
+                    MultiLine = true;
+                }
             }
         }
     }
 
     trigger OnAfterGetRecord()
     begin
-        SetValidationStyle();
-    end;
-
-    var
-        ValidationStyle: Text;
-
-    local procedure SetValidationStyle()
-    begin
         if Rec."Is Valid" then
             ValidationStyle := 'Favorable'
         else
             ValidationStyle := 'Unfavorable';
     end;
+
+    var
+        ValidationStyle: Text;
 }

@@ -12,6 +12,8 @@ This extension provides VAT (Value Added Tax) number validation functionality fo
 - **Format Checking**: Automatic format validation based on country-specific rules
 - **Validation History**: Track all VAT validations with timestamps and user information
 - **User-Friendly Interface**: Easy-to-use pages for VAT checking and history viewing
+- **Table & Field Selection**: Select a table and specific fields using `Config. Package Management` and `Field Selection`
+- **Field Filters**: Maintain field filters with the same filter page behavior used in Configuration Packages
 - **Namespace Support**: Built with modern AL namespace conventions
 
 ## Supported Countries
@@ -50,6 +52,8 @@ This extension provides VAT (Value Added Tax) number validation functionality fo
 - **50100 - TF VAT Check**: Main interface for VAT validation
 - **50101 - TF VAT Validation Results**: List view of validation history
 - **50102 - TF VAT Validation Detail**: Detailed view of a single validation
+- **50205 - TF Table Field Selection**: Select table, include fields, and manage field filters
+- **50207 - TF VAT Check Profile**: App and user profile information page
 
 ## Installation
 
@@ -73,6 +77,13 @@ This extension provides VAT (Value Added Tax) number validation functionality fo
 1. Open the **TF VAT Validation Results** page from the search
 2. Browse all previous validations
 3. Click on any record to view detailed information
+
+### Selecting Table, Fields, and Filters
+
+1. Open **TF Table Field Selection** from the search
+2. Choose a table using **Choose Table**
+3. Add fields with **Select Field**
+4. Set filter criteria with **Field Filters** (same style as Configuration Packages)
 
 ## Development
 
